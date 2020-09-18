@@ -1,0 +1,82 @@
+* {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+#content {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+}
+.btntruoc input,
+.btnsau input,
+#vitri {
+  outline: none;
+  border: 1px solid teal;
+  background-color: green;
+  color: honeydew;
+  font-size: 24px;
+  opacity: 30%;
+  cursor: pointer;
+}
+
+
+.btntruoc input,
+.btnsau input {
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  margin-top: 400px;
+}
+.content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .content .viewlike {
+    font-family: cursive;
+    margin-top: 30px;
+  }
+
+
+
+.viewimg {
+  margin-left: auto;
+  margin-right: auto;
+}
+.content img {
+  margin-top: 50px;
+  height: 500px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.content #vitri {
+  margin-top: 20px;
+  width: 90px;
+  height: 90px;
+  border-radius: 90px;
+}
+
+
+.content .viewlike {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-family: cursive;
+  text-align: center;
+  font-size: 36px;
+}
+
+.viewlike input {
+  width: 50px;
+  height: 40px;
+  outline: none;
+  border: 1px solid grey;
+  font-size: 24px;
+  font-family: cursive;
+  padding-left: 10px;
+}
+

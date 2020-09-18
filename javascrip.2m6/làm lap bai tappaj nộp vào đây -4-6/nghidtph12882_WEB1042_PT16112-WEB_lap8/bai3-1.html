@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASSIGNMENT - BÀI 3 - NGOCNQPH12806</title>
+    <link rel="stylesheet" href="bai3.css" />
+  </head>
+
+  <body>
+    <h2>BÁN HÀNG</h2>
+    <select id="mucgia">
+      <option value="">Mức giá</option>
+      <option value="300">Dưới 300</option>
+      <option value="500">300 - 500</option>
+      <option value="501">Trên 500</option>
+    </select>
+    <table border="1px solid gray">
+      <tr id="rownTitle">
+        <td><input id="check1" type="checkbox" name="" /></td>
+        <td id="tenHang1">Hàng hóa</td>
+        <td id="gia1">Đơn giá</td>
+        <td id="soLuong1">Số lượng</td>
+        <td id="thanhtien1">Thành tiền</td>
+      </tr>
+      <tr id="rownProduct">
+        <td><input id="check" type="checkbox" name="iPhone 9" /></td>
+        <td id="tenHang">iPhone 9</td>
+        <td id="gia">700</td>
+        <td><input id="soLuong" type="text" name="soluong" /></td>
+        <td id="thanhtien"></td>
+      </tr>
+      <tr id="rownProduct">
+        <td><input id="check" type="checkbox" name="SamSung" /></td>
+        <td id="tenHang">SamSung</td>
+        <td id="gia">400</td>
+        <td><input id="soLuong" type="text" name="soluong" /></td>
+        <td id="thanhtien"></td>
+      </tr>
+      <tr id="rownProduct">
+        <td><input id="check" type="checkbox" name="Nokia" /></td>
+        <td id="tenHang">Nokia</td>
+        <td id="gia">100</td>
+        <td><input id="soLuong" type="text" name="soluong" /></td>
+        <td id="thanhtien"></td>
+      </tr>
+      <tr id="rownProduct">
+        <td><input id="check" type="checkbox" name="Sony Xperia" /></td>
+        <td id="tenHang">Sony Xperia</td>
+        <td id="gia">450</td>
+        <td><input id="soLuong" type="text" name="soluong" /></td>
+        <td id="thanhtien"></td>
+      </tr>
+      <tr id="rownProduct">
+        <td><input id="check" type="checkbox" name="Motorola" /></td>
+        <td id="tenHang">Motorola</td>
+        <td id="gia">180</td>
+        <td><input id="soLuong" type="text" name="soluong" /></td>
+        <td id="thanhtien"></td>
+      </tr>
+      <tr id="rownProduct">
+        <td><input id="check" type="checkbox" name="Oppo" /></td>
+        <td id="tenHang">Oppo</td>
+        <td id="gia">600</td>
+        <td><input id="soLuong" type="text" name="soluong" /></td>
+        <td id="thanhtien"></td>
+      </tr>
+      <tr id="rownProduct">
+        <td><input id="check" type="checkbox" name="bPhone" /></td>
+        <td id="tenHang">bPhone</td>
+        <td id="gia">90</td>
+        <td><input id="soLuong" type="text" name="soluong" /></td>
+        <td id="thanhtien"></td>
+      </tr>
+      <tr id="rownSum">
+        <td
+          id="sum"
+          colspan="4"
+          style="font-weight: bold; height: 35px; font-size: 25px;"
+        >
+          TỔNG
+        </td>
+        <td id="tongtien"></td>
+      </tr>
+    </table>
+
+    <script src="bai3.js"></script>
+  </body>
+</html>

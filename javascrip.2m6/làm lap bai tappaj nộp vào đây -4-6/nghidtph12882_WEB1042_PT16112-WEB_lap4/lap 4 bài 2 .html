@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<script type="text/javascript">
+		var a = [-7,-3,7,8,6,5,-4,3,2,1];
+ 
+ 
+		a.sort(function(a, b) {
+			return - a + b;
+		})
+		var maxa=Math.max.apply(null,a);
+		var mina=Math.min.apply(null,a);
+
+		console.log(a);
+		var b = a.reverse();
+		console.log(b);
+	</script>
+</body>
+</html>

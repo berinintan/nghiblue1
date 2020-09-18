@@ -1,0 +1,29 @@
+#boxfrom {
+	width: 600px;
+	height: 600px;
+	margin: 10px 10px;
+	border: 1px solid black;
+	text-align: center;
+}
+button {
+			background-color: black;
+		    color: white;
+		     
+}
+
+#boxfrom {
+			background: #fff;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0,0.0,0.3);
+			width: 400px;
+			max-width: 100%;
+		}
+		form{
+			padding: 10px 40px 5px 40px;
+
+		}
+		label{
+			display: block;
+			font-weight: bold;
+			 
+		}

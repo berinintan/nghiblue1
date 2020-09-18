@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myImage{
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <div id="color" class="colorDiv">
+        <h4 id="text">green</h4>
+        <input type="text" id="username" placeholder="username">
+        <button id="btnClick" onclick="" onmouseover="" onmouseout="">click</button>
+    </div>
+    <img src="./img/img1.jpg" alt="" id="myImage">
+    <script>
+        // document.getElementById('color');    //tìm thẻ HTML theo ID
+        // var b = document.getElementsByClassName('colorDiv'); // tìm thẻ HTML theo tên Class
+        // console.log(b);
+        // var c = document.getElementsByTagName('div');    // tìm theo tên thẻ HTML
+        // console.log(c);
+        // var d = document.querySelector('#color #text');  // tìm theo cú pháp selector css (tìm tất cả các thẻ có id = text nằm trong thẻ có id là color)
+        // console.log(d);
+        // var e = document.querySelector('#color h4'); // tìm tất cả các thẻ h4 nằm trong thẻ có id là color
+        // console.log(e);
+        // var f = document.querySelector('div h4');    // tìm tất cả các thẻ h4 nằm trong thẻ div
+        // console.log(f);
+
+        // f.setAttribute('class','textH4');    // thiết lập thuộc tính và gán giá trị thuộc tính cho thẻ
+        // f.setAttribute('id','abc');
+        // f.setAttribute('class','hhh');
+        // console.log(f.innerHTML);        // .innerHTML : lấy ra nội dung bên trong của 1 thẻ html
+        // f.innerHTML = 'noi dung moi';    // thay đổi nội dung của thẻ
+
+        // var inputValue = document.querySelector('#username');
+        // console.log(inputValue.value);   // lấy ra giá trị nằm trong thẻ input
+        // f.innerHTML = inputValue.value;  // gán giá trị vừa lấy ra ở thẻ input vào thẻ h4
+
+        // var btnClick = document.querySelector('#btnClick');
+        // // btnClick.onclick = function(){
+        // //     alert('canh bao 2');
+        // // }
+
+        /* thêm sự kiện onlick cho button Click */ 
+
+
+        // function canhBao(){
+        //     f.innerHTML = inputValue.value;
+        // }
+        // // btnClick.addEventListener('click',function(){
+        // //     alert('canh bao 3');
+        // // })
+        // btnClick.addEventListener('click',canhBao);
+        /* thêm sự kiện bằng cách dùng hàm addEventListener */ 
+
+        var color = document.querySelector('#color');   // tìm thẻ div có id = color và gán cho biến color
+        var f = document.querySelector('div h4');   
+
+        color.style.border = '1px solid red';   //thêm border cho thẻ div
+        color.style.width = '300px';    // thêm width cho thẻ div
+        color.style.height = '500px';   // thêm height cho thẻ div
+        color.style.backgroundColor = 'green';  //thêm background color 
+        // console.log(f);
+
+        // background-color -> backgroundColor
+        var myImage = document.querySelector('#myImage');   //tìm thẻ img có id = myImage
+
+        myImage.addEventListener('mouseover',function(){
+            myImage.setAttribute('src','./img/img2.jpg');   // thiết lập lại đường dẫn cho ảnh
+        })
+        /* thêm sự kiện mouseover cho ảnh */ 
+        myImage.addEventListener('mouseout',function(){
+            myImage.setAttribute('src','./img/img1.jpg');
+        })
+        /* thêm sự kiện mouseout cho ảnh */ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<button onclick="showImage('src/anh1.jpg')"> apple</button>
+
+khối function add(a, b){
+	var c = a + b;
+	return c;
+}

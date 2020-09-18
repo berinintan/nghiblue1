@@ -1,0 +1,79 @@
+* {
+  margin: 0 auto;
+  padding: 0px;
+}
+
+body {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr,
+th {
+  border: 1px solid gray;
+}
+
+#rownTitle {
+  font-weight: bold;
+  height: 55px;
+  font-size: 20px;
+}
+
+#rownSum {
+  height: 40px;
+}
+
+#rownProduct {
+  height: 30px;
+}
+
+#mucgia {
+  width: 200px;
+  height: 30px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid black;
+}
+
+#mucgia option {
+  cursor: pointer;
+}
+
+#check {
+  width: 30px;
+}
+
+#tenHang {
+  width: 150px;
+}
+
+#gia {
+  width: 100px;
+}
+
+#soLuong {
+  width: 250px;
+  height: 30px;
+  outline: none;
+  border: 0px;
+}
+
+input {
+  padding-left: 10px;
+}
+
+#thanhtien,
+#tongtien {
+  font-weight: bold;
+  font-size: 25px;
+  width: 150px;
+}
+
+#sum {
+  width: 525px;
+}

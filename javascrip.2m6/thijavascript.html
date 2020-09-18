@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="nghi.css" />
+  </head>
+  <style>
+      #boxfrom{
+          background-color: aliceblue;
+          width: 500px;
+          margin: 0px;
+          font-size: 20px;
+      }
+      #boxfrom label{
+        
+   
+          float: left;
+
+      }
+      #boxfrom input{
+
+      }
+
+
+      *{
+			margin: 0;
+			padding: 0;
+		}
+		#boxfrom {
+			background-color: #007d21;
+			width: 500px;
+			margin: 0 auto; 
+			padding: 150px 20px;
+			font-size: 20px;
+			color: black;
+			
+		}
+		.ip_box{
+			width: 100%;
+			float: left;
+			margin-bottom: 10px;
+		}
+		 .ip_box label {
+			width: 30%;
+			float: left;
+			text-align: right;
+			padding-right: 20px;
+			padding-top: 5px;
+		}
+		.ip_box input {
+			width: 50%;
+			float: left;
+			border: 0;
+			padding: 5px 10px;
+		}
+		.radio_box{
+			width: 100%;
+			float: left;
+			margin-bottom: 10px;
+		}
+		.radio_box div {
+			width: 30%;
+			float: left;
+			text-align: right;
+			padding-right: 20px;
+			padding-top: 5px;
+		}
+		.ip_box span {
+			width: 50%;
+			float: left;
+			border: 0;
+			padding: 5px 10px;
+		}
+		button {
+			border: 0;
+			background-color: #333;
+			color: #fff;
+			padding: 7px 10px;
+			width: 70px;
+			text-align: center;
+			margin-top: 5px;
+		}
+  </style>
+  <body>
+    <div id="boxfrom">
+        <label for="hoten"> Họ và tên *</label>
+        <input type="text" name="hoten" id="hoten"> <br>
+        <label for="hoten"> số điện thoại *</label>
+        <input type="text" name="sodienthoai" id="sodienthoai">  <br>
+        <label for="hoten"> địa chỉ*</label>
+        <input type="text" name="diachi" id="diachi">
+        <div>
+            <label for="nghenghiep"> Nghề nghiệp</label>
+            <input type="radio" name="" id="thietke1" value="">  thiết kế web 
+            <input type="radio" name="" id="thietke2" value="">  thiết đồ họa  
+            <input type="radio" name="" id="thietke3" value="">  thiết kế máy tính 
+
+        </div>
+        <div>
+            <button type="button" onclick="guifrom()"> gửi thông tin </button>
+        </div>
+    </div>
+    <script>
+        function guifrom(){
+            var hoten=document.getElementById("hoten");
+            var sodienthoai=document.getElementById("sodienthoai");
+            var diachi=document.getElementById("diachi");
+        
+
+            if (hoten.value.length==0) {
+                alert("mời bạn nhập họ tên");
+                return false;
+            }
+            if (sodienthoai.value.length==0) {
+                alert("mời bạn nhập số diện thoại");
+                return false;
+            }
+            if (diachi.value.length==0) {
+                alert("mời bạn nhập địa chỉ");
+                return false;
+            }
+            if (hoten.value.length<8) {
+                alert("mời bạn nhập 8 ký tự");
+                return false;
+                
+            }
+            if (sodienthoai.value.length<10) {
+                alert("mời bạn nhập 10 ký tự");
+                return false;
+                
+            }
+            alert("đăng nhâp thành công");
+            return true;
+
+        }
+    </script>
+  </body>
+</html>

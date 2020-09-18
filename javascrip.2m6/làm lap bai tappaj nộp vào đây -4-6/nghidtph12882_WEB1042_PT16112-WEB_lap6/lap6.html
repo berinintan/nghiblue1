@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.firstContent{
+			text-align: center;
+		}
+
+		.navbar{
+			background-color: #8080809e;
+		}
+
+		.navbar ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
+		}
+
+		.navbar ul li{
+			display: inline-block;
+			width: 100px;
+			padding: 10px 10px;
+		}
+
+		.navbar ul li:hover{
+			background-color: gray;
+		}
+
+		p{
+			margin: 20px;
+			font-size: 20px;
+		}
+
+		h1,h3{
+			text-transform: uppercase;
+			font-size: 40px;
+			margin: 20px;
+			background: -webkit-linear-gradient(67deg, #009FFF, #ec2F4B 70%);
+					  	-webkit-background-clip: text;
+					  	-webkit-text-fill-color: transparent;
+		}
+
+		img{
+			width: 50%;
+		}
+
+		.addColor{
+			background-color: gray;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="firstContent">
+		<h3>choose</h3>
+		<h1>your champion</h1>
+		<p>With more than 140 champions, you’ll find the perfect match for your playstyle. Master one, or master them all.</p>
+	</div>
+
+	<nav class="navbar">
+		<ul>
+			<li class="navbar__item">Akali</li>
+			<li class="navbar__item">Jinx</li>
+			<li class="navbar__item">Blitzcrank</li>
+			<li class="navbar__item">Yasuo</li>
+		</ul>
+	</nav>
+
+	<div class="imgChampion" style="text-align: center;">
+		<p></p>
+		<p></p>
+		<img src="#" alt="">
+	</div>
+
+	<script>
+		var imgChampion = document.querySelector('.imgChampion').children;
+		var nameCham = imgChampion[0];
+		var noteCham = imgChampion[1];
+		var imgCham = imgChampion[2];
+
+		var champions = document.querySelector('ul')
+
+		var champion = [
+			Akali = {
+				name: 'Akali',
+				note: 'The rogue assassin',
+				src: '../img/Akali.jpg'
+			},
+			Jinx = {
+				name: 'Jinx',
+				note: 'The loose cannon',
+				src: '../img/Jinx.jpg'
+			},
+			Blitzcrank = {
+				name: 'Blitzcrank',
+				note: 'The great steam golem',
+				src: '../img/Blitzcrank.jpg'
+			},
+			Yasuo = {
+				name: 'Yasuo',
+				note: 'The uforgiven',
+				src: '../img/Yasuo.jpg'
+			}
+		]
+
+		champions.addEventListener('click', getInfor)
+
+		function getInfor(e) {
+			var name = e.target.innerHTML;
+			var index;
+
+			for(var i = 0; i < champion.length; i++){
+				if(champion[i].name === name)
+					 index = i;
+			}
+
+			nameCham.innerHTML = champion[index].name;
+			noteCham.innerHTML = champion[index].note; 
+			imgCham.setAttribute('src', champion[index].src);
+		}
+
+
+
+	</script>
+</body>
+</html>

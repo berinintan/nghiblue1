@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		button{
+			padding: 8px 15px;
+			margin: 10px 0;
+		}
+	</style>
+</head>
+<body>
+	<div id="boxfrom">
+		<form action="" onsubmit="return KiemTra()" >
+			<div>
+				<label for="hoten"> nhập họ và tên * </label>
+				<input type="text" name="hoten" id="hoten"><br><br>
+
+				 
+ 
+				<label for="tendangnhap">Tên đăng nhập: </label>
+				<input type="text" name="tendangnhap" id="tendangnhap"> <br>
+ 
+			</div>
+
+			<div>
+				<label for="fname"> giới tính  * </label>
+				 
+				Nam:<input type="radio" name="gioitinh" value="Nam" checked/>
+				 
+			    Nữ:<input type="radio" name="gioitinh" value="Nữ" />
+			 	 
+			</div>
+			 
+			<button>Đăng kí</button>
+	</div>
+	<script >
+		function KiemTra() {
+			var hoten = document.getElementById("hoten");
+			var dienthoai = document.getElementById("dienthoai");
+
+
+			if (hoten.value.length==0) {
+				alert(" tên đăng nhập không để trống");
+				return false;
+			} 
+			if (dienthoai.value.length==0) {
+				alert(" số điện thoại ko dc để  không để trống");
+				return false;
+			} 
+
+			
+			if (hoten.value.length<8) {
+				alert("mật khẩu phải lớn 8 ký tự");
+				return false;
+			}
+			if (dienthoai.value.length<10) {
+				alert("mật khẩu phải lớn hơn 10 ký tự");
+				return false;
+			}
+			alert("Đăng nhập thành công!");
+			return true;
+		}
+
+
+		
+	</script>
+
+</body>
+</html>

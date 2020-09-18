@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="" >
+	<style>
+		*{
+			font-family: 'Roboto', sans-serif;
+		}
+
+		.container{
+			width: 23%;
+			border-radius: 30px;
+			background-color: #d8e9ed;
+			padding: 20px;
+		}
+
+		.box{
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		img{
+			margin-top: 20px;
+			width:62%;
+		}
+
+		.box p{
+			font-weight: bold;
+			font-size: 30px;
+			margin-bottom: 0;
+		}
+
+		h1{
+			color: red;
+		}
+
+		input[type='text']{
+			width: 70%;
+			height: 23px;
+		}
+
+		button{
+			float: right;
+			height: 31px;
+		}
+
+		#product{
+			margin-top: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<img src="img./anh3.png" alt="">
+			<p id="namePd">Iphone 11 Pro Max</p>
+			<h1>$599</h1>
+		</div>
+
+		<div id="getQtt">
+			<input type="text" name="" value="" placeholder="">
+			<button>Buy Now</button>
+		</div>
+
+		<hr>
+		<p id="product">Product: </p>
+		<p id="quantity">Quantity: </p>
+		<p id="price">Price: </p>
+		<p id="amount">Amount: </p>
+	</div>
+
+	<script>
+		var button = document.getElementsByTagName('button')[0];
+		var soluong = document.getElementsByTagName('input')[0];
+
+		var name = document.getElementById('namePd').innerHTML;
+		var Product = document.getElementById('product')
+		var Quantity = document.getElementById('quantity')
+		var Price = document.getElementById('price')
+		var Amount = document.getElementById('amount')
+
+
+		button.addEventListener('click', () => {
+
+			if(isNaN(soluong.value) === true || Number(soluong.value < 0) || soluong.value.trim() === ''){
+				alert('nhập số');
+				soluong.value = '';
+			}else{
+				sl = Number(soluong.value);
+				Quantity.innerHTML = "Quantity: " + sl;
+				Product.innerHTML = "Product: " + name;
+				Price.innerHTML = "Price: " + '$599';
+				Amount.innerHTML = 'Amount: $' + 599*sl;
+			}
+		})
+
+		window.addEventListener('load', () => {
+			document.getElementById("getQtt").firstElementChild.value = "";
+		})
+	</script>	
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> bài 10 function hàm </title>
+	<style>
+        #color{
+            width: 100px;
+            height: 100px;
+            background-image:url("./img/anh1.jpg");
+        }
+     
+     </style>
+</head>
+<body>
+	<div id="color">
+		
+	</div>
+	<h1> function hàm là dì </h1>
+	<p id="sum"></p>
+	<p id="person"></p>
+	<script type="text/javascript">
+		/*var a = 100;
+		var b = 255;
+
+		var sum = sumOfAAndB(a, b);
+
+		function sumOfAAndB(a, b){
+			var x = a + b ;
+			return x;
+		}
+		document.getElementById("sum").innerHTML = sum;
+		*/
+
+		/// tính tổng dãy số từ 1-10
+		/*function sumOfarray(start , end){
+			var s = 0 ;
+			for (var i = start ; i <= end; i++) {
+			//	từ giá trì start đến giá trị end tăng lần lượt cộng đơn 1 đơn vị với nhau xong cộng tất cả vào biến s bến dưới
+				s += i ;
+			}
+			return s; // kết quả
+		}
+		document.getElementById("sum").innerHTML = "tong từ 1 => 10 " + sumOfarray(1, 10);
+*/
+
+	/*	//// function sayhello
+		function sayHello(message, name){
+			var mag = message + " " + name + "!";
+			return mag;
+		}
+		var ms =" good morning";
+		var ms2 = "good night ";
+		var person = " duong thanh nghi";
+		var person2 = "duogn hong nhung";
+
+		document.getElementById("sum").innerHTML = sayHello(ms, person);
+		document.getElementById("person").innerHTML = sayHello(ms2, person2);
+	*/
+/*	
+	var a = 5;
+	var h = 10;
+
+	function dienTichTamgiac(a , h){
+		var mag = (a* h) /2;
+		return mag;
+	}
+	var sum = dienTichTamgiac(a, h);
+
+	document.getElementById("sum").innerHTML = sum;
+
+*/
+	// tính diện tích hình tròn
+ 
+	/*var r = 20 ;
+
+	function dtHinhtron(r){
+		var S = r*r*3.14;
+		return S;
+	}
+	var sum = dtHinhtron(r);
+
+
+	document.getElementById("sum").innerHTML = sum;
+	*/
+
+	var a = 100;
+	 var b = 255;
+	var sum = sumOfAAndB(a , b);
+
+	function sumOfAAndB(a, b){
+		var  x = a + b ;
+		return x ;
+	}
+	// tính tổng dẫy start-end
+	function sumOfArray(start , end){
+		var s = 0;
+		for (var i = start ; i <= end; i++) {
+			 s +=i ;
+		}
+		return s ;
+	}
+	function sayheloo(message , name ){
+		var msg = message + " " + name + "!";
+		return msg;
+	}
+	var ms = "good mỏning";
+	var ms2 = "good night";
+	var preson = "ndi duong 12132";
+	var person2 =" dgi duong 2222"
+
+	document.getElementById("sum").innerHTML = sayheloo(ms, preson);
+	document.getElementById("person").innerHTML = sayheloo(ms2, person2);
+
+	</script>
+</body>
+</html>

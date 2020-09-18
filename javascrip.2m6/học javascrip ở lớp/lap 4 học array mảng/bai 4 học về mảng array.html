@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="text1"></input>
+    <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+    <input type="button" id="button2" value="Display" onclick="display_array();"></input>
+    <div id="Result"></div>
+    <script>
+        var x = 0;
+        var array = [];
+
+        function add_element_to_array() {
+            array[x] = document.getElementById("text1").value;
+              alert("Element: " + array[x] + " Added at index " + x);
+            x++;
+            document.getElementById("text1").value = "";
+            display_array();
+        }
+
+        // function display_array() {
+        //     var e = "<hr/>";
+
+        //     for (var y = 0; y < array.length; y++) {
+        //         e += "Element " + y + " = " + array[y] + "<br/>";
+        //     }
+        //     document.getElementById("Result").innerHTML = e;
+        // }
+
+        // var array = [1, 2, 3, 4, 5];
+        // var array2 = ['r', 'e', 'a', 'h', 'aa'];
+        // var array = new Array(1,2,3,4,5);
+        // console.log(array[2]);
+
+        // for(i=0;i<array.length;i++){
+        //     console.log(array[i]);
+        // }
+        // console.log('===================')
+        // array.forEach(function(element,index){
+        //     console.log(index + '= ' + element);
+        // })
+        // array.unshift(0);
+        // array.push(6,7,8);
+        // array.splice(4,2,100,200);
+        // array.shift();
+        // array.pop();
+        // array.splice(2,1);
+        // console.log(array.join('/'));
+        // console.log(array.concat(array2));
+        // array.forEach(function(element,index){
+        //     console.log(index + '= ' + element);
+        // })
+        // console.log(array2.sort());
+        // var arr1 = [-3, 8, 7, 6, 5, -4, 3, 2, 1];
+        // console.log(arr1.sort(function (a, b) { return a - b; }));
+
+        // var x = 0;
+        // var array = [];
+
+        // var value;
+        // function addValue() {
+        //     value = prompt('Nhap gia tri muon dua vao mang: ');
+        // }
+        // for (i = 0; i < 3; i++) {
+        //     addValue();
+        //     array.push(value);
+        // }
+
+        // console.log(array);
+
+        // var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+        // for(i=0;i<a.length;i++){
+        //     b = a[i];
+        //     console.log('row ' + i);
+        //     for(j=0;j<b.length;j++){
+        //         console.log(b[j]);
+        //     }
+        // }
+
+        //var mang = [2,4,5,6,'a',2];
+
+        // function remove_array_element(array, n) {
+        //     var index = array.indexOf(n);
+        //     console.log(index);
+        //     if (index > -1) {
+        //         array.splice(index, 1);
+        //     }
+        //     return array;
+        // }
+        // console.log(mang);
+
+        // console.log(remove_array_element(mang, 2));
+        // console.log(remove_array_element(mang, 4));
+        // console.log(remove_array_element(mang, 8));
+        // var n = prompt('Nhap gia tri');
+        // for(i=0;i<mang.length;i++){
+        //     if(mang[i] == n){
+        //         mang.splice(i,1);
+        //     }
+        // }
+        // console.log(mang);
+/*
+        for(i=0;i<5;i++){
+            n = prompt('nhap gia tri thu '+ (i+1) + ' vao');
+            mang.push(n);
+        }
+        mang.forEach(function(element,index){
+            console.log('['+index+']'+ '=' + element);
+            console.log(typeof element);
+        })*/
+    </script>
+</body>
+
+</html>

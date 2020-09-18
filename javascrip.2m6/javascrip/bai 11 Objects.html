@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> baif 1 Objects </title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var preson = {
+			firstName: "duong",
+			lastName: "Nghi",
+			age :25,
+			gender:"male",
+			address:"Hanoi",
+			smile:function(){
+				//haa
+				return "hahahah";
+			},
+			gotoSchool:function(){
+				return "by bus";
+			},
+			eatBraekfirst:function(){
+				return "very puickly!";
+			},
+			fullName:function(){
+				return this.firstName + " " + this.lastName;
+			},
+			
+
+		}
+		// teen Objects
+		preson.firstName = "hoang";
+		preson.lastName = " thuong";
+		preson.address = " sai gon";
+		document.getElementById("demo").innerHTML = preson.fullName();
+ 
+
+
+	</script>	
+</body>
+</html>

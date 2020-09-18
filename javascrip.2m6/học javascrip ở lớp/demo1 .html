@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>dsadsadsadsa</title>
+    <link rel="stylesheet" href="">
+    <style type="text/css">
+        *{
+			margin: 0;
+			padding: 0;
+		}
+        #boxfrom {
+            background-color: aqua; /*Nền màu xanh*/
+            width: 500px;  /*Rộng 700px*/
+            margin: 0 auto;  /*Canh giữa màn hình*/
+            padding: 150px 20px; /*căn lề bên trong magrin (trên dưới + 150px ) (trái phải + 20px) */
+            font-size: 20px; /*Font chữ 30px*/
+            color: black;  /*Font màu trắng*/
+           
+        }
+        #idbox{
+            width: 100%; /*Rộng 100%*/
+            float: left;     /*Nằm bên trái*/
+            margin-top: 20px; /*căn lề trên bên ngoài 20px*/
+           /* //padding-top: 20px;  /*căn lề trên bên ngoài cùng 20px*/*/
+        }
+        #idbox label{
+            width: 30%;
+            float: left;
+            text-align: right ; /*Text bên trong canh phair*/
+            padding-right: 20px;
+            padding-top: 5px;
+        }
+        #idbox input{
+            width: 50%;
+            float: left;
+            border: 0px;
+            padding :5px 10px  ;
+
+        }
+        #radio_box{
+            width: 100%;
+            float: left;
+            border: 0px;
+            margin-bottom: 10px;
+        }
+      
+
+        #radio_box div{
+            width: 30%;
+            float: left;
+            text-align: right;
+            padding-right: 20px ;
+            padding-top:5px; 
+        }
+        #idbox span{
+            width: 50%;
+            float: left;
+            border: 0px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boxfrom">
+        <form action="">
+            <div id="idbox">
+                <label for="hoten">họ tên</label>
+                <input type="text" name="hoten " id="hoten" placeholder="Họ tên">
+            </div>
+            <div id="radio_box"> 
+                <div> Giới Tính : </div>  
+                <span>
+                    <label for="gt_nam"> Nam</label> 
+                    <input type="radio" name="gioitinh" id="gt_nam" value="nam">
+                    <label for="gt_nu" style="margin-left: 20px" >Nu</label>
+                    <input type="radio" name="gioitinh" id="gt_nu" value="nu">
+                </span>
+            </div>
+            <div id="idbox">
+                <label for="sodienthoai"> số điện thoại</label>
+                <input type="text" name="sodienthaoi" id="sodienthoai" placeholder="số diện thoại">
+            </div>
+            <div style="text-align: center;" >
+                <button type="button" onclick="kiemtra()"> gửi</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function kiemtra(){
+            var hoten=document.getElementById("hoten");
+            var sodienthaoi=document.getElementById("sodienthoai");
+
+            if (hoten.value.length==0) {
+                alert("tên đăng nhập không được bỏ trống")
+                return false;
+            }
+            if (sodienthoai.value.length==0) {
+                alert("số diện thoại không được bỏ trống")
+                return false;
+            }
+            if (hoten.value.length<8) {
+                alert(" mời bạn nhập lớn hơn 8 kí tự");
+                return false;
+            }
+            if (sodienthoai.value.length<10) {
+                alert("mời bạn nhập lơn hơn 10 ký tự");
+                return false;
+            }
+            alert("đăng nhập thành công");
+            return true;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+ 

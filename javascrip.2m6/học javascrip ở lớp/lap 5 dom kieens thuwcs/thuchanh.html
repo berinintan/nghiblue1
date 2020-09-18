@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        #color{
+            width: 30px;
+            height:30px;
+            background-image:url("./img1.jpg");
+        }
+     
+     </style>
+</head>
+<body>
+
+    <div id="color">
+ 
+       
+        
+    </div> 
+    <button id="btnClick" onclick="" onmouseover="" onmouseout="">Previous</button>
+        <button id="btnClick" onclick="" onmouseover="" onmouseout="">Next</button>
+ 
+    <img src="./img1.jpg" style="width: 500px;height: 500px" id="myImage">
+     <button id="btnClick" onclick="" onmouseover="" onmouseout="">Previous</button>
+        <button id="bunClick" onclick="" onmouseover="" onmouseout="">Next</button>
+ 
+        
+    <script type="text/javascript">
+        var color = document.querySelector('#color');   // tìm thẻ div có id = color và gán cho biến color
+        var f = document.querySelector('div h4');   
+
+        color.style.border = '1px solid red';   //thêm border cho thẻ div
+        color.style.width = '500px';    // thêm width cho thẻ div
+        color.style.height = '500px';   // thêm height cho thẻ div
+        color.style.backgroundColor = 'whith';  //thêm background color 
+           // background-color -> backgroundColor
+        var myImage = document.querySelector('#myImage');   //tìm thẻ img có id = myImage
+        var btnClick = document.querySelector('#btnClick');
+        var bunClick = document.querySelector('#bunClick');
+
+        function next( ) {
+            myImage.setAttribute('src',"./img2.jpg");
+            myImage.src = './img2.jpg';
+        }
+        btnClick..addEventListener('click',next);
+        myImage.addEventListener('mauseover',next);
+
+
+      
+        /* thêm sự kiện mouseout cho ảnh */ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bài 12 thuôc tính</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+	// object's properties
+	var preson = {
+		firstName:"nghi",
+		lastName:"duong",
+		age: 25,
+		 
+	}
+
+	preson.fullName = preson.lastName + ' ' + preson.lastName;
+	preson.gender = "male";
+	 
+	// cú pháp xóa 1 thuộc tính  
+	delete preson.age;
+	delete preson.gender;
+
+	var x = 'lastName';
+	var a = 'age';
+	document.getElementById("demo").innerHTML = preson.firstName + '  ' + preson[x] + ' , ' +  preson[a] + ',' + preson.gender;
+</script>
+</body>
+</html>

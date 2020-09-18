@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>baif 13 metthods casc phuongw thucws object</title>
+</head>
+<body>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		// object's methods
+
+		var preson = {
+			firstName : "nghi",
+			lastname : " duong ",
+			age : 25,
+
+			move: function  ( ) {
+				 return "walk stop by slep";
+			},
+			fullName:function (){
+				return this.firstName + ' ' + this.lastname;
+			}
+		}
+		// objectName.objectMethod()
+
+		//add methods to object : objectNma.newMethodName = function(){..};
+		preson.laugh = function() {
+			return"haha!!";
+		}
+
+		document.getElementById("demo").innerHTML = "full Name: " + preson.fullName() + ", laugh : " + preson.laugh();
+
+	</script>
+</body>
+</html>

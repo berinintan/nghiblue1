@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bài 2 - </title>
+</head>
+<style>
+	  body{
+          font-family: sans-serif;
+          
+      }
+      table{
+          margin-top: 15px;
+      }
+      table,tr td{
+          border:2px solid black;
+          border-collapse: collapse;
+
+      }
+      th,td{
+        padding: 8px 10px;
+        text-align: center;
+      }
+      #timten{
+          display: inline;
+      }
+</style>
+<body  >
+     <div> lọc theo</div>
+     <div>
+        <input type="radio"  id="locten" onclick="LocTen()"> Lọc Tên  <span style="margin-right: 15px; "></span>
+           
+        <input type="radio"   id="diemdat" onclick="diemdat()"> Diểm Dạt
+
+        <input type="radio"   id="timten" onblur="timten()"> tìm tên
+        <table>
+			<thead>
+				<tr>
+					<td>STT</td>
+					<td colspan="2">Họ và tên</td>
+					<td>Điểm JS1</td>
+					<td>Điểm JS2</td>
+					<td>Điểm trung bình</td>
+				</tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td> 1 </td>
+                    <td> nguyễn văn</td>
+                    <td> bình</td>
+                    <td> 8</td>
+                    <td> 9</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> 2 </td>
+                    <td> vũ thị hanh</td>
+                    <td> son</td>
+                    <td> 7</td>
+                    <td> 8</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td> 3 </td>
+                    <td> trần văn</td>
+                    <td> bình</td>
+                    <td> 7</td>
+                    <td> 2</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+     </div>
+
+     <div style="padding: 20px 30px;">
+          <button onclick="Load()"  > Tính điểm</button>
+     </div>
+       
+        <script>
+            function Load(){
+                var the_tr=document.querySelectorAll("table tbody tr");
+                console.log(the_tr);
+
+                for (var i=0; i<the_tr.length; i++) {
+                    var diem1=the_tr[i].children[3].innerHTML;
+                    console.log(diem1);
+                    var diem2=the_tr[i].children[4].innerHTML;
+                    var dtb=the_tr[i].lastElementChild.innerHTML=(Number(diem1) + Number(diem2))/2
+                    
+                }
+            }
+            function diemdat(){
+                var the_tr=document.querySelectorAll("table tbody tr");
+                console.log(the_tr);
+                 for (var i=0; i<the_tr.length; i++) {
+                    diem=the_tr[i].lastElementChild.innerHTML;
+                    if (Number(diem)>5) {
+                        the_tr[i].style.background="yellow"
+                    }
+                     
+                 }
+            }
+ 
+            function LocTen(){
+			var locten = document.getElementById("locten");
+			console.log(locten);
+
+			var timten = document.getElementById("timten");
+			console.log(timten);
+
+			if(locten.checked==true){
+				timten.style.display="block";
+			}
+		}
+		// function TimTen(){
+		// 	var locten = document.getElementById("locten");
+		// 	console.log(locten);
+		// 	var timten = document.getElementById("timten");
+		// 	console.log(timten);
+
+		// 	var the_tr=document.querySelectorAll("table tbody tr");
+		// 	for(var i=0;i<the_tr.length;i++){
+		// 		var ten=the_tr[i].children[2].innerHTML;
+		// 		if(timten.value==ten){
+		// 			the_tr[i].style.background="yellow";
+		// 		}	
+		// 	}
+		// } 
+		
+        </script>
+     </div>
+</body>
+</html>
